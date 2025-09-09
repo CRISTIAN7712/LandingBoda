@@ -82,6 +82,38 @@
         return false;
     });
 
+    // Countdown
+    (function () {
+        var weddingDate = new Date("Oct 9, 2025 15:00:00").getTime();
+
+        var countdownFunction = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = weddingDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Mostrar resultados
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // Cuando llegue a cero
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("timer").innerHTML = `
+                    <div class="w-100 text-center text-white">
+                        <h2 class="mb-3">💍✨ ¡Llegó el gran día! ✨💍</h2>
+                        <p class="lead">Hoy celebramos el amor y el inicio de una nueva historia juntos ❤️</p>
+                    </div>
+                `;
+            }
+        }, 1000);
+    })();
+
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({

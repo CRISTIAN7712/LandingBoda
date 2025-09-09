@@ -9770,3 +9770,27 @@ a.text-dark:hover, a.text-dark:focus {
     border-right: none !important;
   }
 }
+
+#timer {
+  gap: 30px;
+}
+
+.count-box {
+  text-align: center;
+}
+
+.count-box span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff; /* números en blanco */
+  display: block;
+}
+
+.count-box small {
+  font-size: 1rem;
+  color: #f1f1f1; /* texto gris claro */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
