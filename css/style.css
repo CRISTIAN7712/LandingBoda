@@ -9771,26 +9771,42 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+/* Estilo general */
 #timer {
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  /* permite que salten de línea si no caben */
+  gap: 15px;        /* separación entre cajas */
 }
 
 .count-box {
   text-align: center;
+  min-width: 70px;  /* asegura tamaño mínimo */
+  flex: 1 1 auto;   /* se adaptan al ancho disponible */
 }
 
 .count-box span {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #fff; /* números en blanco */
+  color: #fff;
   display: block;
 }
 
 .count-box small {
-  font-size: 1rem;
-  color: #f1f1f1; /* texto gris claro */
+  font-size: 0.8rem;
+  color: #f1f1f1;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 576px) {
+  .count-box span {
+    font-size: 1.5rem;  /* números más pequeños en móviles */
+  }
+  .count-box small {
+    font-size: 0.7rem;
+  }
 }
 
 
