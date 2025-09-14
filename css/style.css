@@ -9737,9 +9737,23 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .bg-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/boda/anillos-edit.png), no-repeat center center;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/boda/anillos-edit.png") no-repeat center center;
   background-size: cover;
+  background-attachment: scroll; /* evita problemas en móviles */
 }
+
+/* Ajustes para pantallas de teléfono */
+@media (max-width: 768px) {
+  .bg-gallery {
+    background-position: center top; /* centra la parte superior */
+    background-size: contain;       /* hace que la imagen completa se vea */
+  }
+}
+
 
 .gallery-carousel .owl-nav {
   position: absolute;
