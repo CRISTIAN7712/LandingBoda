@@ -84,7 +84,7 @@
 
     // Countdown
     (function () {
-        var weddingDate = new Date("Oct 9, 2025 15:00:00").getTime();
+        var weddingDate = new Date("Oct 4, 2025 15:00:00").getTime();
 
         var countdownFunction = setInterval(function () {
             var now = new Date().getTime();
